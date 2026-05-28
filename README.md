@@ -9,6 +9,7 @@ A Python script that pulls live job listings from the Adzuna API, filters by sal
 * Formats salary as clean dollar amounts
 * Parses and displays posting date in readable format
 * Appends matching results to a local log file on every run
+* Tracks seen listings to avoid duplicate results across runs
 
 ## Stack
 
