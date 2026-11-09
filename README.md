@@ -32,6 +32,22 @@ A Python script that pulls live job listings from the Adzuna API, filters by sal
 5. Run: `python3 job_search.py`
 6. Results print to terminal and append to `jobs_log.txt`
 
+## Example output
+
+```
+DevOps Engineer
+Jean Martin, Inc
+https://www.adzuna.com/land/ad/...
+Salary: $186,607 - $186,607
+October 21, 2026
+---
+```
+
+The script creates two files locally on first run:
+
+* `jobs_log.txt` — running history of every matching listing
+* `seen_urls.txt` — listings already shown, so they're skipped on future runs
+
 ## Roadmap
 
 - [ ] Score listings against a target skill set
