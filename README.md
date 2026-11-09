@@ -13,22 +13,27 @@ A Python script that pulls live job listings from the Adzuna API, filters by sal
 
 ## Stack
 
-* Python 3
+* Python 3.9+
 * Adzuna Jobs API
 * `requests` — HTTP library for API calls
+* `python-dotenv` — loads API credentials from a local `.env` file
 * `datetime` — date parsing and formatting
 
 ## How to run
 
 1. Clone the repo
-2. Install dependencies: `pip3 install requests`
-3. Add your Adzuna `app_id` and `app_key` to `job_search.py`
-4. Run: `python3 job_search.py`
-5. Results print to terminal and append to `jobs_log.txt`
+2. Install dependencies: `pip3 install -r requirements.txt`
+3. Get a free API key at [developer.adzuna.com](https://developer.adzuna.com/)
+4. Copy the example env file and add your credentials:
+   ```bash
+   cp .env.example .env
+   ```
+   Then fill in `ADZUNA_APP_ID` and `ADZUNA_APP_KEY` in `.env`. This file is gitignored and never committed.
+5. Run: `python3 job_search.py`
+6. Results print to terminal and append to `jobs_log.txt`
 
 ## Roadmap
 
-- [ ] Save results with deduplication — skip listings already seen
 - [ ] Score listings against a target skill set
 - [ ] Add email or Slack notification for new matches
 - [ ] Schedule with cron to run daily automatically

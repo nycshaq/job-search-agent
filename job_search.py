@@ -1,11 +1,15 @@
+import os
 import requests
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 url = f"https://api.adzuna.com/v1/api/jobs/us/search/1"
 
 params = {
-    "app_id": "ae542a3d",
-    "app_key": "6bdfd021f7a181b09afae73cc01f104a",
+    "app_id": os.environ["ADZUNA_APP_ID"],
+    "app_key": os.environ["ADZUNA_APP_KEY"],
     "what": "devops engineer",
     "where": "new york",
     "results_per_page": 5
